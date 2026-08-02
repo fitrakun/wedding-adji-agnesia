@@ -1,0 +1,1 @@
+`pnpm dev`; `pnpm lint`; `pnpm typecheck`; `pnpm build`; `pnpm test:e2e`. macOS/Darwin. Copy `.env.example` to `.env.local` before real RSVP testing.

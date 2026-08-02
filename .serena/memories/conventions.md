@@ -1,0 +1,1 @@
+Use centralized variants in `src/config/invitation-variants.ts`; never scatter event times. Keep static invitation visuals server-renderable and client code limited to Motion/interactions/RSVP. Preserve Canva navy/ivory/pink tokens in globals.css. Motion must respect reduced motion and animate transforms/opacity only. Anonymous Supabase access is INSERT-only.

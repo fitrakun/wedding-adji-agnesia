@@ -1,0 +1,1 @@
+Required completion gate: `pnpm lint && pnpm typecheck && pnpm build`, then `pnpm test:e2e`. Browser-facing work also needs screenshot review at mobile and desktop, clean console/page errors, no horizontal overflow, and reduced-motion verification.

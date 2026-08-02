@@ -1,0 +1,1 @@
+Next.js App Router + TypeScript + Tailwind CSS v4. pnpm package manager. Motion v12 via `motion/react` with LazyMotion/domAnimation. Supabase JS direct anonymous insert protected by RLS. Zod form validation. Playwright Chromium E2E. See `docs/animation-plan.md` and `docs/supabase-setup.md`.

@@ -1,0 +1,15 @@
+- generic [active] [ref=f4e1]:
+  - main [ref=f4e2]:
+    - region [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - paragraph [ref=f4e5]: Syukuran Pernikahan
+        - img "Ilustrasi Agnesia dan Adji dalam bingkai bunga mawar" [ref=f4e6]
+        - heading "Agnesia & Adji" [level=1] [ref=f4e7]:
+          - generic [ref=f4e8]: Agnesia
+          - generic [ref=f4e9]: "&"
+          - generic [ref=f4e10]: Adji
+        - paragraph [ref=f4e11]: Kepada Yth.Bapak/Ibu/Saudara/i
+        - strong [ref=f4e12]: Fitra
+        - button "Buka undangan" [ref=f4e13] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=f4e19] [cursor=pointer]
+  - alert [ref=f4e23]

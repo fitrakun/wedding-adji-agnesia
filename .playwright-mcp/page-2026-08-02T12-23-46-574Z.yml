@@ -1,0 +1,117 @@
+- generic [active] [ref=f2e1]:
+  - main [ref=f2e2]:
+    - generic [ref=f2e24]:
+      - region [ref=f2e25]:
+        - generic [ref=f2e26]:
+          - paragraph [ref=f2e27]: Dengan penuh syukur, kami mengundang Anda kesyukuran pernikahan
+          - img "Ilustrasi kedua mempelai" [ref=f2e28]
+          - heading "Agnesia & Adji" [level=2] [ref=f2e29]:
+            - generic [ref=f2e30]: Agnesia
+            - generic [ref=f2e31]: "&"
+            - generic [ref=f2e32]: Adji
+      - region [ref=f2e33]:
+        - article [ref=f2e34]:
+          - heading "Surat Ar-Rum ayat 21" [level=2] [ref=f2e35]
+          - paragraph [ref=f2e36]: وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
+          - blockquote [ref=f2e37]: Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
+          - text: Qs Ar-rum 21
+      - region [ref=f2e38]:
+        - generic [ref=f2e39]:
+          - paragraph [ref=f2e40]: السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+          - paragraph [ref=f2e41]: "Dengan memohon rahmat dan ridho Allah SWT,kami bermaksud untuk melaksanakan pernikahanputra-putri kami:"
+          - generic [ref=f2e42]:
+            - article [ref=f2e43]:
+              - img "Ilustrasi Agnesia Puspitasari" [ref=f2e44]
+              - heading "Agnesia Puspitasari" [level=2] [ref=f2e45]
+              - paragraph [ref=f2e46]: Anak dari alm. Atmajaya & Ibu Manar
+            - article [ref=f2e47]:
+              - img "Ilustrasi Ibrahim Adji" [ref=f2e48]
+              - heading "Ibrahim Adji" [level=2] [ref=f2e49]
+              - paragraph [ref=f2e50]: Anak dari Bapak Adji Baroto & Ibu Sofrida
+      - region [ref=f2e51]:
+        - generic [ref=f2e53]:
+          - heading "Syukuran Pernikahan" [level=2] [ref=f2e54]
+          - paragraph [ref=f2e55]: Sabtu, 22 Agustus 2026
+          - paragraph [ref=f2e56]: 10:30 - 12:00 WIB
+          - heading "Lumé Coffee Lounge, Lt. 2" [level=3] [ref=f2e57]
+          - paragraph [ref=f2e58]: Jl. KH Abdullah Syafei No. 7,Tebet, Jakarta Selatan
+        - heading "Save The Date" [level=2] [ref=f2e59]
+        - generic "Contoh hitung mundur pada desain" [ref=f2e60]:
+          - generic [ref=f2e61]:
+            - strong [ref=f2e62]: "14"
+            - generic [ref=f2e63]: hari
+          - generic [ref=f2e64]:
+            - strong [ref=f2e65]: "02"
+            - generic [ref=f2e66]: menit
+          - generic [ref=f2e67]:
+            - strong [ref=f2e68]: "21"
+            - generic [ref=f2e69]: detik
+        - generic [ref=f2e70]:
+          - img "Peta sekitar Lumé Coffee Lounge" [ref=f2e71]
+          - link "Buka Google Maps" [ref=f2e72] [cursor=pointer]:
+            - /url: https://maps.google.com/?q=Lume+Coffee+Lounge+Tebet
+      - region [ref=f2e73]:
+        - heading "RSVP" [level=2] [ref=f2e74]
+        - generic [ref=f2e76]:
+          - generic [ref=f2e77]:
+            - generic [ref=f2e78]: Nama
+            - textbox "Nama" [ref=f2e79]: Fitra
+          - generic [ref=f2e80]:
+            - generic [ref=f2e81]: Konfirmasi Kehadiran
+            - combobox "Konfirmasi Kehadiran" [ref=f2e82]:
+              - option "Pilih konfirmasi" [disabled] [selected]
+              - option "Hadir"
+              - option "Tidak hadir"
+          - generic [ref=f2e83]:
+            - generic [ref=f2e84]: Jumlah Tamu
+            - combobox "Jumlah Tamu" [ref=f2e85]:
+              - option "1 orang" [selected]
+              - option "2 orang"
+              - option "3 orang"
+              - option "4 orang"
+              - option "5 orang"
+          - generic [ref=f2e86]:
+            - generic [ref=f2e87]: Ucapan / Doa
+            - textbox "Ucapan / Doa" [ref=f2e88]
+          - button "Kirim Konfirmasi" [ref=f2e89]
+      - region [ref=f2e90]:
+        - img "Ilustrasi mobil pernikahan dengan hadiah" [ref=f2e92]
+        - article [ref=f2e93]:
+          - heading "Wedding Gift" [level=2] [ref=f2e94]
+          - paragraph [ref=f2e95]: Bapak/Ibu/Saudara/i sekalian dapat memberikan hadiah digital kepada kami melalui nomor rekening berikut.
+          - paragraph [ref=f2e96]: Bagi yang telah mengisi dan memberikan hadiah kepada kami, kami mengucapkan banyak terima kasih. Semoga hadiah dari Bapak/Ibu/Saudara/i dapat bermanfaat bagi kami dalam mengarungi bahtera rumah tangga.
+          - button "Lihat Nomor Rekening" [ref=f2e97] [cursor=pointer]
+      - region [ref=f2e98]:
+        - heading "Photo Gallery" [level=2] [ref=f2e99]
+        - generic [ref=f2e100]:
+          - figure [ref=f2e101]:
+            - img "Foto kebersamaan Agnesia dan Adji 1" [ref=f2e102]
+          - figure [ref=f2e103]:
+            - img "Foto kebersamaan Agnesia dan Adji 2" [ref=f2e104]
+          - figure [ref=f2e105]:
+            - img "Foto kebersamaan Agnesia dan Adji 3" [ref=f2e106]
+          - figure [ref=f2e107]:
+            - img "Foto kebersamaan Agnesia dan Adji 4" [ref=f2e108]
+          - figure [ref=f2e109]:
+            - img "Foto kebersamaan Agnesia dan Adji 5" [ref=f2e110]
+          - figure [ref=f2e111]:
+            - img "Foto kebersamaan Agnesia dan Adji 6" [ref=f2e112]
+          - figure [ref=f2e113]:
+            - img "Foto kebersamaan Agnesia dan Adji 7" [ref=f2e114]
+          - figure [ref=f2e115]:
+            - img "Foto kebersamaan Agnesia dan Adji 8" [ref=f2e116]
+          - figure [ref=f2e117]:
+            - img "Foto kebersamaan Agnesia dan Adji 9" [ref=f2e118]
+          - figure [ref=f2e119]:
+            - img "Foto kebersamaan Agnesia dan Adji 10" [ref=f2e120]
+      - region [ref=f2e121]:
+        - generic [ref=f2e122]:
+          - paragraph [ref=f2e123]: Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.Wassalamu’alaikum warahmatullahi wabarakatuh.
+          - img "Ilustrasi Agnesia dan Adji dalam bingkai emas" [ref=f2e124]
+          - heading "Agnesia & Adji" [level=2] [ref=f2e125]:
+            - generic [ref=f2e126]: Agnesia
+            - generic [ref=f2e127]: "&"
+            - generic [ref=f2e128]: Adji
+          - generic [ref=f2e129]: Made with ♥ by Fitra, Anaz, Rafi
+  - button "Open Next.js Dev Tools" [ref=f2e19] [cursor=pointer]
+  - alert [ref=f2e23]

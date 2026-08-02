@@ -1,0 +1,14 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - region [ref=e3]:
+      - generic [ref=e4]:
+        - paragraph [ref=e5]: Syukuran Pernikahan
+        - img "Ilustrasi Agnesia dan Adji dalam bingkai bunga mawar" [ref=e6]
+        - heading "Agnesia & Adji" [level=1] [ref=e7]:
+          - generic [ref=e8]: Agnesia
+          - generic [ref=e9]: "&"
+          - generic [ref=e10]: Adji
+        - paragraph [ref=e11]: Kepada Yth.Bapak/Ibu/Saudara/i
+        - strong [ref=e12]: Fitra
+        - button "Buka undangan" [ref=e13] [cursor=pointer]
+  - alert [ref=e14]

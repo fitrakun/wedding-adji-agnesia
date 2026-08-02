@@ -1,0 +1,1 @@
+Wedding invitation web app. One catch-all invitation experience; `/sesi2` selects friend schedule and all other paths use family fallback. Canva fidelity source and decisions: `docs/canva-design-audit.md`. Animation and data setup: `mem:tech_stack`.

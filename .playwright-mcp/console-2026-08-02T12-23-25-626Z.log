@@ -1,0 +1,20 @@
+[     154ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[     174ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[   87114ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[   87144ms] [LOG] [Fast Refresh] done in 40ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  167029ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  167152ms] [LOG] [Fast Refresh] done in 230ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  174069ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  174174ms] [LOG] [Fast Refresh] done in 206ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  176245ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  176250ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  176582ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  176802ms] [LOG] [Fast Refresh] done in 322ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  209238ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  209268ms] [LOG] [Fast Refresh] done in 42ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  221442ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  221471ms] [LOG] [Fast Refresh] done in 30ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  231484ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  231512ms] [LOG] [Fast Refresh] done in 52ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  233564ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
+[  233595ms] [LOG] [Fast Refresh] done in 33ms @ http://localhost:3000/_next/static/chunks/01-b_next_dist_0r6dg19._.js:2489
