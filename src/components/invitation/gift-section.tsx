@@ -5,20 +5,25 @@ import { useEffect, useRef, useState } from "react";
 import { playSoftTransition } from "@/lib/animation/transitions";
 import { PetalField } from "./decorations";
 
+const accounts = [
+  { bank: "BCA", name: "AGNESIA PUSPITASARI", number: "1640394940" },
+  { bank: "BCA", name: "IBRAHIM ADJI", number: "2300990528" },
+] as const;
+
 export function GiftSection() {
   const [showAccount, setShowAccount] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const accountRef = useRef<HTMLDivElement>(null);
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (showAccount) playSoftTransition(accountRef.current);
+    if (showAccount) playSoftTransition(containerRef.current);
   }, [showAccount]);
 
-  async function copyAccount() {
+  async function copyAccount(number: string, index: number) {
     try {
-      await navigator.clipboard.writeText("2300990528");
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      await navigator.clipboard.writeText(number);
+      setCopiedIndex(index);
+      setTimeout(() => setCopiedIndex(null), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
     }
@@ -33,17 +38,21 @@ export function GiftSection() {
         <p>Bapak/Ibu/Saudara/i sekalian dapat memberikan hadiah digital kepada kami melalui nomor rekening berikut.</p>
         <p>Bagi yang telah mengisi dan memberikan hadiah kepada kami, kami mengucapkan banyak terima kasih. Semoga hadiah dari Bapak/Ibu/Saudara/i dapat bermanfaat bagi kami dalam mengarungi bahtera rumah tangga.</p>
         <button className="canva-button" type="button" onClick={() => setShowAccount(v => !v)} aria-expanded={showAccount}>{showAccount ? "Sembunyikan Rekening" : "Lihat Nomor Rekening"}</button>
-        {showAccount && <div ref={accountRef} className="account-card-container">
-          <div className="ripped-paper-background">
-            <span>Rekening <b>BCA</b> a.n. <strong>IBRAHIM ADJI</strong></span>
-            <div className="account-number-row">
-              <b>2300990528</b>
-              <button type="button" onClick={copyAccount} aria-label="Salin nomor rekening" title={copied ? "Copied!" : "Copy"}>
-                <Image src="/assets/gift/copy-icon.png" alt="" width={24} height={28} style={{ width: "auto", height: "auto" }} />
-              </button>
-              {copied && <span className="copy-tooltip">Copied!</span>}
+        {showAccount && <div ref={containerRef} className="account-cards-wrapper">
+          {accounts.map((account, index) => (
+            <div key={account.number} className="account-card-container">
+              <div className="ripped-paper-background">
+                <span>Rekening <b>{account.bank}</b> a.n. <strong>{account.name}</strong></span>
+                <div className="account-number-row">
+                  <b>{account.number}</b>
+                  <button type="button" onClick={() => copyAccount(account.number, index)} aria-label="Salin nomor rekening" title={copiedIndex === index ? "Copied!" : "Copy"}>
+                    <Image src="/assets/gift/copy-icon.png" alt="" width={24} height={28} style={{ width: "auto", height: "auto" }} />
+                  </button>
+                  {copiedIndex === index && <span className="copy-tooltip">Copied!</span>}
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>}
       </div>
     </div>

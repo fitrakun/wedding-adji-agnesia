@@ -8,14 +8,14 @@ import { GiftSection } from "./gift-section";
 import { GallerySection } from "./gallery-section";
 import { ClosingSection } from "./closing-section";
 
-export function InvitationContent({ variant, guestName }: { variant: InvitationVariant; guestName: string }) {
+export function InvitationContent({ variant, guestName, maxGuests }: { variant: InvitationVariant; guestName: string; maxGuests: number }) {
   return (
     <div data-invitation-content>
       <WelcomeSection />
       <VerseSection />
       <CoupleSection />
       <EventSection variant={variant} />
-      <RsvpForm variant={variant} guestName={guestName} />
+      <RsvpForm variant={variant} guestName={guestName} maxGuests={maxGuests} />
       <GiftSection />
       <GallerySection />
       <ClosingSection />

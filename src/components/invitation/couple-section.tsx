@@ -2,7 +2,7 @@ import Image from "next/image";
 import { PetalField } from "./decorations";
 
 const people = [
-  { name: "Agnesia Puspitasari", parents: "Anak dari alm. Atmajaya & Ibu Manar", image: "/assets/couple/bride-portrait-framed.png", alt: "Ilustrasi Agnesia Puspitasari" },
+  { name: "Agnesia Puspitasari", parents: "Anak dari Alm. Bapak Atmajaya & Ibu Manar", image: "/assets/couple/bride-portrait-framed.png", alt: "Ilustrasi Agnesia Puspitasari" },
   { name: "Ibrahim Adji", parents: "Anak dari Bapak Adji Baroto & Ibu Sofrida", image: "/assets/couple/groom-portrait-framed.png", alt: "Ilustrasi Ibrahim Adji" },
 ];
 

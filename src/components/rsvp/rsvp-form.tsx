@@ -12,11 +12,12 @@ import { PetalField } from "../invitation/decorations";
 interface RsvpFormProps {
   variant: InvitationVariant;
   guestName: string;
+  maxGuests: number;
 }
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
-export function RsvpForm({ variant, guestName }: RsvpFormProps) {
+export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
   const successRef = useRef<HTMLDivElement>(null);
@@ -102,7 +103,7 @@ export function RsvpForm({ variant, guestName }: RsvpFormProps) {
             <div className="field">
               <label htmlFor="attendeeCount">Jumlah Tamu</label>
               <select id="attendeeCount" name="attendeeCount" defaultValue="1">
-                {[1, 2, 3, 4, 5].map((count) => <option key={count} value={count}>{count} orang</option>)}
+                {Array.from({ length: maxGuests }, (_, i) => i + 1).map((count) => <option key={count} value={count}>{count} orang</option>)}
               </select>
             </div>
             <div className="field">
