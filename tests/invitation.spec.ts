@@ -3,6 +3,8 @@ import { expect, test } from "@playwright/test";
 async function openInvitation(page: import("@playwright/test").Page, path = "/family") {
   await page.goto(path);
   await page.getByRole("button", { name: "Buka undangan" }).click();
+  // Let scroll entrance animations settle so interactive elements are stable.
+  await page.waitForTimeout(1200);
 }
 
 test.describe("semantic layered invitation", () => {

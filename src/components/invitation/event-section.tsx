@@ -4,7 +4,7 @@ import { PetalField } from "./decorations";
 import { EventCountdown } from "./event-countdown";
 
 export function EventSection({ variant }: { variant: InvitationVariant }) {
-  return <section className="invitation-section event-section" aria-labelledby="event-heading">
+  return <section className="invitation-section event-section" aria-labelledby="event-heading" data-reveal="section">
     <PetalField />
     <div className="event-envelope" data-reveal-item>
       <Image src="/assets/event/envelope-card.png" alt="" width={182} height={200} className="envelope-art" />
@@ -18,9 +18,9 @@ export function EventSection({ variant }: { variant: InvitationVariant }) {
         <p>Jl. KH Abdullah Syafei No. 7,<br />Tebet, Jakarta Selatan</p>
       </div>
     </div>
-    <h2 className="font-daydream save-date">Save The Date</h2>
+    <h2 className="font-daydream save-date" data-reveal-item>Save The Date</h2>
     <EventCountdown target={variant.eventStartsAt} />
-    <div className="map-panel">
+    <div className="map-panel" data-reveal-item>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.305618351886!2d106.84691847681695!3d-6.223373293764731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3a817308db5%3A0x88eb1a101759fc5a!2sLum%C3%A9%20Coffee!5e0!3m2!1sen!2sid!4v1785680407086!5m2!1sen!2sid" width="600" height="450" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" style={{ border: 0 }}></iframe>
       <a className="canva-button" href="https://maps.app.goo.gl/1RJhaTicaDJiB8fa7" target="_blank" rel="noreferrer">Buka Google Maps</a>
     </div>
