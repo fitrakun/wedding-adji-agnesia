@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   title: "Syukuran Pernikahan Agnesia & Adji",
   description: "Undangan syukuran pernikahan Agnesia Puspitasari dan Ibrahim Adji, Sabtu 22 Agustus 2026.",
   openGraph: { title: "Agnesia & Adji — Syukuran Pernikahan", description: "Sabtu, 22 Agustus 2026 — Lumé Coffee Lounge, Tebet.", type: "website" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#fff6ef" };
