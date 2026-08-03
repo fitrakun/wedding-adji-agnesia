@@ -197,15 +197,22 @@
 }
 
 .person-card {
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 16px;
+  border-radius: 16px;
+  background: rgba(255, 246, 239, 0.92);
 }
 
 .person-card img {
   width: 43%;
   height: auto;
-  flex: 1;
-  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
 }
