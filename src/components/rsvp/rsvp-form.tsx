@@ -78,6 +78,7 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
       <h2 id="rsvp-heading" className="script-heading" data-reveal-item>
         RSVP
       </h2>
+      <p className="rsvp-description" data-reveal-item>Berikan ucapan harapan dan do&apos;a kepada kedua mempelai</p>
       <div className="paper-card" data-reveal-item>
         <Image className="paper-clip" src="/assets/rsvp/paper-clip.png" alt="" width={100} height={86} />
         {status === "success" ? (

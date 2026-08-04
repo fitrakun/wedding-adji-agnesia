@@ -6,7 +6,7 @@ import { playSoftTransition } from "@/lib/animation/transitions";
 import { PetalField } from "./decorations";
 
 const accounts = [
-  { bank: "BCA", name: "AGNESIA PUSPITASARI", number: "1640394940" },
+  { bank: "BCA", name: "AGNESTA PUSPITASARI", number: "1640394940" },
   { bank: "BCA", name: "IBRAHIM ADJI", number: "2300990528" },
 ] as const;
 

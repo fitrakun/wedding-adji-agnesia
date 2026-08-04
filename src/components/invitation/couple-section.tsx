@@ -13,7 +13,7 @@ export function CoupleSection() {
     <Image className="couple-floral navy" src="/assets/couple/navy-floral-corner.png" alt="" width={200} height={193} data-flower-layer="near" />
     <div className="section-content couple-content">
       <Image className="salam" src="/assets/couple/assalamualaikum.png" alt="السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ" width={624} height={118} data-reveal="fade" />
-      <p id="couple-heading" data-reveal-item>Dengan memohon rahmat dan ridho Allah SWT,<br />kami bermaksud untuk melaksanakan pernikahan<br />putra-putri kami:</p>
+      <p id="couple-heading" data-reveal-item>Bismillahirrahmanirrahim. Dengan memohon rahmat dan ridho Allah SWT, serta sebagai ungkapan rasa syukur atas telah terlaksananya akad nikah putra-putri kami, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir dalam acara syukuran pernikahan</p>
       <div className="people-stack">
         {people.map((person) => <article className="person-card" key={person.name} data-reveal-item>
           <div>
