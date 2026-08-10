@@ -1,4 +1,8 @@
-export type SongId = "love-love-love" | "stephen-sanchez-love-love-love";
+export type SongId =
+  | "ellie-goulding"
+  | "ellie-goulding-3"
+  | "leona-lewis"
+  | "paper-kites";
 
 export interface SongConfig {
   id: SongId;
@@ -8,21 +12,33 @@ export interface SongConfig {
 }
 
 export const SONGS: Record<SongId, SongConfig> = {
-  "love-love-love": {
-    id: "love-love-love",
-    src: "/assets/music/Love%20Love%20Love%20Cutted%20Version.MP3",
-    title: "Love Love Love",
-    artist: "",
+  "ellie-goulding": {
+    id: "ellie-goulding",
+    src: "/assets/music/ELLIE%20GOULDING%20CUT%20.mp3",
+    title: "ELLIE GOULDING CUT",
+    artist: "Ellie Goulding",
   },
-  "stephen-sanchez-love-love-love": {
-    id: "stephen-sanchez-love-love-love",
-    src: "/assets/music/Stephen%20Sanchez%20-%20LOVE%2C%20LOVE%2C%20LOVE.mp3",
-    title: "LOVE, LOVE, LOVE",
-    artist: "Stephen Sanchez",
+  "ellie-goulding-3": {
+    id: "ellie-goulding-3",
+    src: "/assets/music/ELLIE%20GOULDING%20CUT%203.mp3",
+    title: "ELLIE GOULDING CUT 3",
+    artist: "Ellie Goulding",
+  },
+  "leona-lewis": {
+    id: "leona-lewis",
+    src: "/assets/music/Leona%20Lewis%20cut%201.mp3",
+    title: "Leona Lewis cut 1",
+    artist: "Leona Lewis",
+  },
+  "paper-kites": {
+    id: "paper-kites",
+    src: "/assets/music/Paper%20kites%20cut%201.mp3",
+    title: "Paper kites cut 1",
+    artist: "Paper Kites",
   },
 };
 
-export const DEFAULT_SONG: SongId = "love-love-love";
+export const DEFAULT_SONG: SongId = "ellie-goulding";
 
 export function getSong(songId: SongId = DEFAULT_SONG): SongConfig {
   return SONGS[songId];
