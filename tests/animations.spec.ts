@@ -57,7 +57,7 @@ test("gallery items reveal without horizontal overflow", async ({ page }) => {
 test("RSVP success state appears only after a successful mocked response", async ({ page }) => {
   let requestSeen = false;
   let releaseResponse = false;
-  await page.route("**/rest/v1/rsvps*", async (route) => {
+  await page.route("**/api/rsvp", async (route) => {
     if (route.request().method() === "POST") {
       requestSeen = true;
       // Hold the response until the test releases the gate.
@@ -149,7 +149,7 @@ test("gift account card stays visible after its entrance animation", async ({ pa
   await page.waitForTimeout(1000);
 
   await page.getByRole("button", { name: "Lihat Nomor Rekening" }).click();
-  const card = page.locator(".account-card-container");
+  const card = page.locator(".account-card-container").filter({ hasText: "2300990528" });
   await expect(card).toBeVisible();
   await expect(card.getByText("2300990528")).toBeVisible();
 

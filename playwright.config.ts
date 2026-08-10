@@ -12,7 +12,18 @@ export default defineConfig({
     screenshot: "only-on-failure",
     video: "retain-on-failure",
   },
-  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
+  projects: [
+    {
+      name: "chromium",
+      testIgnore: /.*\.android\.spec\.ts/,
+      use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      name: "android-chrome",
+      testMatch: /.*\.android\.spec\.ts/,
+      use: { ...devices["Pixel 5"] },
+    },
+  ],
   webServer: {
     command: "pnpm dev",
     url: "http://localhost:3000",

@@ -19,15 +19,16 @@ function getCountdown(target: string, now = Date.now()): CountdownValue {
 }
 
 export function EventCountdown({ target }: { target: string }) {
-  const [mounted, setMounted] = useState(false);
   const [countdown, setCountdown] = useState<CountdownValue | null>(null);
 
   useEffect(() => {
-    setMounted(true);
     const update = () => setCountdown(getCountdown(target));
-    update();
+    const initialUpdate = window.setTimeout(update, 0);
     const interval = window.setInterval(update, 60_000);
-    return () => window.clearInterval(interval);
+    return () => {
+      window.clearTimeout(initialUpdate);
+      window.clearInterval(interval);
+    };
   }, [target]);
 
   const values = countdown
@@ -36,7 +37,7 @@ export function EventCountdown({ target }: { target: string }) {
 
   return <div className="countdown" aria-label="Hitung mundur menuju acara" aria-live="polite" suppressHydrationWarning>
     {values.map(([value, label]) => <div className="countdown-card" key={label} data-reveal-item>
-      <strong>{mounted ? String(value).padStart(2, "0") : "00"}</strong>
+      <strong>{String(value).padStart(2, "0")}</strong>
       <span>{label}</span>
     </div>)}
   </div>;

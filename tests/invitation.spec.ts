@@ -82,7 +82,7 @@ test("320px has no overflow and reduced motion keeps content visible", async ({ 
 
 test("RSVP validates, submits once, and shows success", async ({ page }) => {
   let inserts = 0;
-  await page.route("**/rest/v1/rsvps*", async route => { if (route.request().method() === "POST") inserts++; await new Promise(r => setTimeout(r, 200)); await route.fulfill({ status: 201, contentType: "application/json", body: "[]" }); });
+  await page.route("**/api/rsvp", async route => { if (route.request().method() === "POST") inserts++; await new Promise(r => setTimeout(r, 200)); await route.fulfill({ status: 201, contentType: "application/json", body: "{\"success\":true}" }); });
   await openInvitation(page, "/sesi2");
   await page.getByLabel("Nama").clear();
   await page.getByRole("button", { name: "Kirim Konfirmasi" }).click();
@@ -97,7 +97,7 @@ test("RSVP validates, submits once, and shows success", async ({ page }) => {
 });
 
 test("Supabase failure retains form values", async ({ page }) => {
-  await page.route("**/rest/v1/rsvps*", route => route.fulfill({ status: 500, contentType: "application/json", body: "{}" }));
+  await page.route("**/api/rsvp", route => route.fulfill({ status: 503, contentType: "application/json", body: "{}" }));
   await openInvitation(page);
   await page.getByLabel("Nama").fill("Agnes");
   await page.getByLabel("Konfirmasi Kehadiran").selectOption("not_attending");

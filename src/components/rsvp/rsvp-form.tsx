@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { InvitationVariant } from "@/config/invitation-variants";
-import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { rsvpSchema } from "@/lib/validation/rsvp";
 import { playSoftTransition } from "@/lib/animation/transitions";
 import { GuestMessagesSection } from "../invitation/guest-messages-section";
@@ -20,6 +19,7 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
+  const submissionLockedRef = useRef(false);
   const successRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (status === "submitting" || status === "success") return;
+    if (submissionLockedRef.current || status === "success") return;
 
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -46,25 +46,25 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
       return;
     }
 
+    submissionLockedRef.current = true;
     setStatus("submitting");
     setError("");
 
     try {
-      const supabase = createSupabaseBrowserClient();
-      const { error: insertError } = await supabase.from("rsvps").insert({
-        guest_name: parsed.data.guestName,
-        attendance_status: parsed.data.attendanceStatus,
-        attendee_count: parsed.data.attendeeCount,
-        message: parsed.data.message || null,
-        guest_type: variant.guestType,
-        invitation_path: variant.invitationPath,
-        event_time: variant.eventTime,
+      const response = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...parsed.data,
+          guestType: variant.guestType,
+        }),
       });
 
-      if (insertError) throw insertError;
+      if (!response.ok) throw new Error("RSVP submission failed");
       setStatus("success");
       window.dispatchEvent(new Event("rsvp:submitted"));
     } catch {
+      submissionLockedRef.current = false;
       setError("Konfirmasi belum dapat dikirim. Silakan coba beberapa saat lagi.");
       setStatus("error");
     }
