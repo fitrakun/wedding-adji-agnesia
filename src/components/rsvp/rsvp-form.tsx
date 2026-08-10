@@ -17,6 +17,8 @@ interface RsvpFormProps {
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
+  const rsvpDeadline = new Date(variant.rsvpClosesAt).getTime();
+  const [isRsvpOpen, setIsRsvpOpen] = useState(() => Date.now() < rsvpDeadline);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
   const submissionLockedRef = useRef(false);
@@ -25,6 +27,23 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
   useEffect(() => {
     if (status === "success") playSoftTransition(successRef.current);
   }, [status]);
+
+  useEffect(() => {
+    if (!isRsvpOpen) return;
+
+    let timeout: number;
+    const scheduleClose = () => {
+      const remaining = rsvpDeadline - Date.now();
+      if (remaining <= 0) {
+        setIsRsvpOpen(false);
+        return;
+      }
+      timeout = window.setTimeout(scheduleClose, Math.min(remaining, 2_147_483_647));
+    };
+    scheduleClose();
+
+    return () => window.clearTimeout(timeout);
+  }, [isRsvpOpen, rsvpDeadline]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -70,6 +89,8 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
     }
   }
 
+  if (!isRsvpOpen) return null;
+
   return (
     <section className="invitation-section rsvp-section" aria-labelledby="rsvp-heading" id="rsvp" data-reveal="section">
       <PetalField />
@@ -79,6 +100,9 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
         RSVP
       </h2>
       <p className="rsvp-description" data-reveal-item>Berikan ucapan harapan dan do&apos;a kepada kedua mempelai</p>
+      <p className="rsvp-deadline" data-reveal-item>
+        Formulir RSVP dapat diisi hingga H-3 sebelum acara. Mohon kesediaan Bapak/Ibu/Saudara/i untuk memberikan konfirmasi sesegera mungkin. Terima kasih.
+      </p>
       <div className="paper-card" data-reveal-item>
         <Image className="paper-clip" src="/assets/rsvp/paper-clip.png" alt="" width={100} height={86} />
         {status === "success" ? (
@@ -102,7 +126,7 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
               </select>
             </div>
             <div className="field">
-              <label htmlFor="attendeeCount">Jumlah Tamu</label>
+              <label htmlFor="attendeeCount">Pilih Jumlah Tamu</label>
               <select id="attendeeCount" name="attendeeCount" defaultValue="1">
                 {Array.from({ length: maxGuests }, (_, i) => i + 1).map((count) => <option key={count} value={count}>{count} orang</option>)}
               </select>

@@ -21,13 +21,17 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid RSVP data." }, { status: 400 });
   }
 
+  const variant = INVITATION_VARIANTS[parsed.data.guestType];
+  if (Date.now() >= new Date(variant.rsvpClosesAt).getTime()) {
+    return Response.json({ error: "RSVP submissions are closed." }, { status: 410 });
+  }
+
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
   if (!url || !key) {
     return Response.json({ error: "RSVP service is unavailable." }, { status: 503 });
   }
 
-  const variant = INVITATION_VARIANTS[parsed.data.guestType];
   const supabase = createClient(url, key, {
     auth: { autoRefreshToken: false, persistSession: false },
   });

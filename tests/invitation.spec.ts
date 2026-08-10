@@ -80,6 +80,17 @@ test("320px has no overflow and reduced motion keeps content visible", async ({ 
   await expect(page.getByRole("heading", { name: "RSVP" })).toBeVisible();
 });
 
+test("RSVP is available through H-3 and hidden after the deadline", async ({ page }) => {
+  await page.clock.install({ time: new Date("2026-08-19T23:59:00+07:00") });
+  await openInvitation(page);
+
+  await expect(page.getByRole("heading", { name: "RSVP" })).toBeVisible();
+  await expect(page.getByText(/Formulir RSVP dapat diisi hingga H-3/)).toBeVisible();
+
+  await page.clock.fastForward("01:01");
+  await expect(page.getByRole("heading", { name: "RSVP" })).toHaveCount(0);
+});
+
 test("RSVP validates, submits once, and shows success", async ({ page }) => {
   let inserts = 0;
   await page.route("**/api/rsvp", async route => { if (route.request().method() === "POST") inserts++; await new Promise(r => setTimeout(r, 200)); await route.fulfill({ status: 201, contentType: "application/json", body: "{\"success\":true}" }); });
