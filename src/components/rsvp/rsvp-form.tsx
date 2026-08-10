@@ -101,7 +101,7 @@ export function RsvpForm({ variant, guestName, maxGuests }: RsvpFormProps) {
       </h2>
       <p className="rsvp-description" data-reveal-item>Berikan ucapan harapan dan do&apos;a kepada kedua mempelai</p>
       <p className="rsvp-deadline" data-reveal-item>
-        Formulir RSVP dapat diisi hingga H-3 sebelum acara. Mohon kesediaan Bapak/Ibu/Saudara/i untuk memberikan konfirmasi sesegera mungkin. Terima kasih.
+        Formulir RSVP dapat diisi hingga H-5 sebelum acara. Mohon kesediaan Bapak/Ibu/Saudara/i untuk memberikan konfirmasi sesegera mungkin. Terima kasih.
       </p>
       <div className="paper-card" data-reveal-item>
         <Image className="paper-clip" src="/assets/rsvp/paper-clip.png" alt="" width={100} height={86} />
