@@ -15,8 +15,8 @@ export function InvitationContent({ variant, guestName, maxGuests }: { variant: 
       <VerseSection />
       <CoupleSection />
       <EventSection variant={variant} />
-      <RsvpForm variant={variant} guestName={guestName} maxGuests={maxGuests} />
       <GiftSection />
+      <RsvpForm variant={variant} guestName={guestName} maxGuests={maxGuests} />
       <GallerySection />
       <ClosingSection />
     </div>
