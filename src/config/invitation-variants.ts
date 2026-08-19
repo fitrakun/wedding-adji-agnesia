@@ -16,7 +16,7 @@ export const INVITATION_VARIANTS: Record<GuestType, InvitationVariant> = {
     eventTimeWithZone: "10:30 - 12:00 WIB",
     invitationPath: "/family",
     eventStartsAt: "2026-08-22T10:30:00+07:00",
-    rsvpClosesAt: "2026-08-18T00:00:00+07:00",
+    rsvpClosesAt: "2026-08-22T15:00:00+07:00",
   },
   friend: {
     guestType: "friend",
@@ -24,7 +24,7 @@ export const INVITATION_VARIANTS: Record<GuestType, InvitationVariant> = {
     eventTimeWithZone: "12:30 - 14:00 WIB",
     invitationPath: "/sesi2",
     eventStartsAt: "2026-08-22T12:30:00+07:00",
-    rsvpClosesAt: "2026-08-18T00:00:00+07:00",
+    rsvpClosesAt: "2026-08-22T15:00:00+07:00",
   },
 };
 
